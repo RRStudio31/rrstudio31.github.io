@@ -1,65 +1,149 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="monetag" content="899244181ef5d78848fe28cecc8bcee2">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1687016561124188"
      crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha App</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-    body { background-color: #121212; color: #fff; }
-    header { padding: 2rem; text-align: center; background-color: #1f1f1f; }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.2rem; color: #ccc; }
-    main { padding: 2rem; text-align: center; }
-    .download-buttons { margin: 2rem 0; }
-    .download-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 1rem 2rem;
-      font-weight: bold;
-      font-size: 1rem;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      background: linear-gradient(45deg, #4caf50, #81c784);
-      transition: 0.3s;
+    :root {
+      --bg: #0b0b0b;
+      --card: #121212;
+      --teal: #00ffd0;
+      --text: #e0e0e0;
+      --muted: #888;
     }
-    .download-buttons a:hover { background: linear-gradient(45deg, #66bb6a, #a5d6a7); }
-    .screenshots { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; }
-    .screenshots img { max-width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-    footer { text-align: center; padding: 1.5rem; color: #888; font-size: 0.9rem; border-top: 1px solid #333; }
-    @media(max-width: 600px) {
-      .screenshots img { max-width: 90%; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 255, 208, 0.05);
+      animation: slideUp 1s ease-in-out;
+    }
+
+    .download-buttons {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .download-buttons a {
+      background: var(--teal);
+      color: #000;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .download-buttons a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(0, 255, 208, 0.5);
+    }
+
+    .screenshots {
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .screenshots img {
+      width: 280px;
+      border-radius: 14px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .screenshots img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 2rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid #1c1c1c;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Minha App</h1>
-    <p>O melhor aplicativo para [função principal da app]</p>
+    <h1>FocusTimer</h1>
+    <p>Concentre-se. Organize-se. Alcance mais.</p>
   </header>
 
-  <main>
-    <section class="download-buttons">
-      <a href="link-do-exe-ou-msix" target="_blank">Download Windows</a>
-    </section>
+  <section class="card">
+    <p>FocusTimer ajuda você a gerenciar o tempo e manter o foco com um design minimalista e som ambiente relaxante. Ideal para estudos, trabalho e produtividade pessoal.</p>
+    
+    <div class="download-buttons">
+      <a href="link-do-apk" target="_blank">📱 Download Android</a>
+      <a href="link-do-exe" target="_blank">💻 Download Windows</a>
+    </div>
 
-    <section class="screenshots">
-      <img src="screenshot1.png" alt="Screenshot da app">
-      <img src="screenshot2.png" alt="Screenshot da app">
-      <img src="screenshot3.png" alt="Screenshot da app">
-    </section>
-  </main>
+    <div class="screenshots">
+      <img src="screenshot1.png" alt="Tela principal">
+      <img src="screenshot2.png" alt="Timer em execução">
+      <img src="screenshot3.png" alt="Configurações">
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Minha App. Todos os direitos reservados.
+    © 2025 FocusTimer — Desenvolvido por RR Studio
   </footer>
 
 </body>
 </html>
+
