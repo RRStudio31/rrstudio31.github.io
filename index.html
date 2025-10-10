@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="monetag" content="899244181ef5d78848fe28cecc8bcee2">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1687016561124188"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1687016561124188"
      crossorigin="anonymous"></script>
   <script>(function(s){s.dataset.zone='10015633',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-  <title>FocusTimer — App de Produtividade</title>
+  <title>GameTimer — Productivity App</title>
+  <link rel="icon" type="image/png" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://www.paypal.com/sdk/js?client-id=SEU_CLIENT_ID_PAYPAL&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
   <style>
@@ -19,7 +20,14 @@
       --text: #e0e0e0;
       --muted: #888;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
     body {
       background-color: var(--bg);
       color: var(--text);
@@ -29,17 +37,28 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
+
     header {
       text-align: center;
       padding: 3rem 1rem 2rem;
       animation: fadeIn 1s ease-in-out;
     }
+
+    header img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,255,208,0.3);
+    }
+
     header h1 {
       font-size: 2.8rem;
       font-weight: 700;
       color: var(--teal);
       letter-spacing: 1px;
     }
+
     header p {
       margin-top: 0.5rem;
       color: var(--muted);
@@ -143,64 +162,65 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    
-  .donate-button {
-    background: linear-gradient(135deg, #00ffd0, #00bfa5);
-    color: #000;
-    font-weight: 700;
-    font-size: 1rem;
-    border: none;
-    border-radius: 12px;
-    padding: 0.9rem 2rem;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(0, 255, 208, 0.3);
-    transition: all 0.3s ease;
-  }
 
-  .donate-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(0, 255, 208, 0.6);
-    background: linear-gradient(135deg, #00e5bb, #00a895);
-  }
+    .donate-button {
+      background: linear-gradient(135deg, #00ffd0, #00bfa5);
+      color: #000;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      padding: 0.9rem 2rem;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0, 255, 208, 0.3);
+      transition: all 0.3s ease;
+    }
 
-  .donate-button:active {
-    transform: scale(0.97);
-    box-shadow: 0 0 10px rgba(0, 255, 208, 0.4);
-  }
+    .donate-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 255, 208, 0.6);
+      background: linear-gradient(135deg, #00e5bb, #00a895);
+    }
 
+    .donate-button:active {
+      transform: scale(0.97);
+      box-shadow: 0 0 10px rgba(0, 255, 208, 0.4);
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>FocusTimer</h1>
-    <p>Concentre-se. Organize-se. Alcance mais.</p>
+    <!-- LOGO AREA -->
+    <img src="logo.png" alt="GameTimer Logo">
+    <h1>GameTimer</h1>
+    <p>Focus. Organize. Achieve more.</p>
   </header>
 
   <section class="card">
-    <p>O <strong>FocusTimer</strong> ajuda você a gerenciar o tempo e manter o foco com um design minimalista e som ambiente relaxante. Ideal para estudos, trabalho e produtividade pessoal.</p>
+    <p><strong>GameTimer</strong> helps you manage your time and maintain focus with a minimalist design and relaxing ambient sounds. Perfect for studying, working, and personal productivity.</p>
     
     <div class="download-buttons">
-      <a href="LINK_DO_EXE" target="_blank">💻 Download Windows</a>
+      <a href="LINK_TO_EXE" target="_blank">💻 Download for Windows</a>
     </div>
 
     <div class="donate">
-      <h3>Apoie o projeto 💚</h3>
-      <p>Se gosta da app, considere fazer uma doação para apoiar o desenvolvimento.</p>
+      <h3>Support the Project 💚</h3>
+      <p>If you like this app, consider making a donation to support its development.</p>
       <button class="donate-button" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=6LUTPRH32U7YE', '_blank')">
-      Donate via PayPal
-    </button>
+        Donate via PayPal
+      </button>
     </div>
 
     <div class="screenshots">
-      <img src="GameTimer_em_curso.png" alt="Tela principal">
-      <img src="GameTimercontrolo.png" alt="Timer em execução">
-      <img src="GameTimersettings.png" alt="Configurações">
+      <img src="GameTimer_em_curso.png" alt="Main screen">
+      <img src="GameTimercontrolo.png" alt="Timer running">
+      <img src="GameTimersettings.png" alt="Settings">
     </div>
   </section>
 
   <footer>
-    © 2025 FocusTimer — Desenvolvido por RR Studio
+    © 2025 GameTimer — Developed by RR Studio
   </footer>
 
   <script>
@@ -211,5 +231,6 @@
 
 </body>
 </html>
+
 
 
