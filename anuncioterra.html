@@ -14,10 +14,24 @@
       font-family: Arial, sans-serif;
     }
 
-    .ad-sidebar {
+    .ad-sidebar-r {
       position: fixed;
       top: 50%;
       right: 10px;
+      transform: translateY(-50%);
+      width: 160px;
+      height: 600px;
+      border: 2px solid #111;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    .ad-sidebar-l {
+      position: fixed;
+      top: 50%;
+      left: 10px;
       transform: translateY(-50%);
       width: 160px;
       height: 600px;
@@ -41,7 +55,20 @@
   </style>
 </head>
 <body>
-  <div class="ad-sidebar">
+  <div class="ad-sidebar-l">
+    <div class="ad-label">Advertisement</div>
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/723c8e3e8d975dbf79e54cf49663fc8a/invoke.js"></script>
+  </div>
+  <div class="ad-sidebar-r">
     <div class="ad-label">Advertisement</div>
     <script type="text/javascript">
       atOptions = {
