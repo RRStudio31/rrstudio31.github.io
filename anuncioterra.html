@@ -1,44 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anúncio Monetag - In-Page Push</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adsterra Banner</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #111;
-      color: white;
-      font-family: Arial, sans-serif;
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       height: 100vh;
+      margin: 0;
+      color: #fff;
+      font-family: Arial, sans-serif;
     }
-
-    
-    #monetag-container {
-      width: 320px;
-      height: auto;
-      margin-top: 20px;
+    .ad-container {
+      border: 2px solid #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
     }
   </style>
 </head>
 <body>
-  <h2 style=align="center">Ad</h2>
-
-<script type="text/javascript">
-	atOptions = {
-		'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
-		'format' : 'iframe',
-		'height' : 600,
-		'width' : 160,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/723c8e3e8d975dbf79e54cf49663fc8a/invoke.js"></script>
-  
-  </body>
+  <div class="ad-container">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/723c8e3e8d975dbf79e54cf49663fc8a/invoke.js"></script>
+  </div>
+</body>
 </html>
