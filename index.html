@@ -186,6 +186,29 @@
       transform: scale(0.97);
       box-shadow: 0 0 10px rgba(0, 255, 208, 0.4);
     }
+
+        .ad-left, .ad-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 160px;
+      height: 600px;
+      border: 2px solid #111;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      background-color: #000;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .ad-left {
+      left: 10px;
+    }
+
+    .ad-right {
+      right: 10px;
+    }
+    
   </style>
 </head>
 <body>
