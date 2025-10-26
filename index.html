@@ -7,18 +7,23 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1687016561124188"
      crossorigin="anonymous"></script>
   <script>(function(s){s.dataset.zone='10015633',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-  <title>GameTimer — Productivity App</title>
+  <title>RRStudio — GameTimer & GeoRank</title>
   <link rel="icon" type="image/png" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://www.paypal.com/sdk/js?client-id=SEU_CLIENT_ID_PAYPAL&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
   <style>
     :root {
-      --bg: #0b0b0b;
-      --card: #121212;
-      --teal: #00ffd0;
-      --teal-dark: #00c4a6;
-      --text: #e0e0e0;
-      --muted: #888;
+      --bg-light: #f8f9fa;
+      --bg-card-light: #ffffff;
+      --text-light: #333333;
+      --muted-light: #666666;
+      --border-light: #e0e0e0;
+      --primary: #00a896;
+      --primary-dark: #007a6e;
+      --bg-dark: #121212;
+      --card-dark: #1e1e1e;
+      --text-dark: #e0e0e0;
+      --muted-dark: #888888;
     }
 
     * {
@@ -29,8 +34,8 @@
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: var(--bg-light);
+      color: var(--text-light);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -38,43 +43,130 @@
       overflow-x: hidden;
     }
 
+    /* Header */
     header {
       text-align: center;
-      padding: 3rem 1rem 2rem;
+      padding: 2rem 1rem;
+      width: 100%;
+      background-color: var(--bg-card-light);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       animation: fadeIn 1s ease-in-out;
     }
 
-    header img {
-      width: 100px;
-      height: auto;
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
       margin-bottom: 1rem;
-      border-radius: 16px;
-      box-shadow: 0 0 15px rgba(0,255,208,0.3);
     }
 
-    header h1 {
-      font-size: 2.8rem;
+    .logo-container img {
+      width: 60px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .logo-container h1 {
+      font-size: 2.5rem;
       font-weight: 700;
-      color: var(--teal);
-      letter-spacing: 1px;
+      color: var(--primary);
     }
 
     header p {
-      margin-top: 0.5rem;
-      color: var(--muted);
+      color: var(--muted-light);
       font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0 1rem;
+      gap: 0;
+      background-color: var(--bg-card-light);
+      border-radius: 12px;
+      padding: 5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .nav-tab {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      color: var(--muted-light);
+    }
+
+    .nav-tab.active {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    /* Sections */
+    .section {
+      display: none;
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    /* GeoRank Section */
+    .georank-section {
+      background-color: var(--bg-light);
+    }
+
+    /* GameTimer Section */
+    .gametimer-section {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
     }
 
     .card {
-      background: var(--card);
-      border: 1px solid #222;
+      background: var(--bg-card-light);
+      border: 1px solid var(--border-light);
       border-radius: 16px;
       padding: 2rem;
-      max-width: 700px;
+      max-width: 900px;
       width: 90%;
+      margin: 0 auto 2rem;
       text-align: center;
-      box-shadow: 0 0 25px rgba(0, 255, 208, 0.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       animation: slideUp 1s ease-in-out;
+    }
+
+    .gametimer-section .card {
+      background: var(--card-dark);
+      border: 1px solid #333;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .gametimer-section .card h2 {
+      color: var(--primary);
+    }
+
+    .card p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: var(--muted-light);
+    }
+
+    .gametimer-section .card p {
+      color: var(--muted-dark);
     }
 
     .download-buttons {
@@ -86,8 +178,8 @@
     }
 
     .download-buttons a {
-      background: var(--teal);
-      color: #000;
+      background: var(--primary);
+      color: white;
       padding: 1rem 2rem;
       border-radius: 12px;
       font-weight: 600;
@@ -98,7 +190,8 @@
 
     .download-buttons a:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 15px rgba(0, 255, 208, 0.5);
+      box-shadow: 0 5px 15px rgba(0, 168, 150, 0.4);
+      background: var(--primary-dark);
     }
 
     .donate {
@@ -108,21 +201,39 @@
 
     .donate h3 {
       margin-bottom: 0.5rem;
-      color: var(--teal);
+      color: var(--primary);
       font-weight: 600;
     }
 
     .donate p {
-      color: var(--muted);
+      color: var(--muted-light);
       margin-bottom: 1rem;
     }
 
-    #paypal-container {
-      display: inline-block;
-      background: var(--teal-dark);
-      border-radius: 10px;
-      padding: 10px 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 208, 0.2);
+    .gametimer-section .donate p {
+      color: var(--muted-dark);
+    }
+
+    .donate-button {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      padding: 0.9rem 2rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 168, 150, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .donate-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 168, 150, 0.5);
+    }
+
+    .donate-button:active {
+      transform: scale(0.97);
     }
 
     .screenshots {
@@ -136,8 +247,12 @@
     .screenshots img {
       width: 280px;
       border-radius: 14px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
+    }
+
+    .gametimer-section .screenshots img {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
     .screenshots img:hover {
@@ -147,10 +262,11 @@
     footer {
       margin-top: auto;
       padding: 2rem;
-      color: var(--muted);
+      color: var(--muted-light);
       text-align: center;
-      border-top: 1px solid #1c1c1c;
+      border-top: 1px solid var(--border-light);
       font-size: 0.9rem;
+      width: 100%;
     }
 
     @keyframes fadeIn {
@@ -163,31 +279,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .donate-button {
-      background: linear-gradient(135deg, #00ffd0, #00bfa5);
-      color: #000;
-      font-weight: 700;
-      font-size: 1rem;
-      border: none;
-      border-radius: 12px;
-      padding: 0.9rem 2rem;
-      cursor: pointer;
-      box-shadow: 0 0 20px rgba(0, 255, 208, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .donate-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px rgba(0, 255, 208, 0.6);
-      background: linear-gradient(135deg, #00e5bb, #00a895);
-    }
-
-    .donate-button:active {
-      transform: scale(0.97);
-      box-shadow: 0 0 10px rgba(0, 255, 208, 0.4);
-    }
-
-        .ad-left, .ad-right {
+    .ad-left, .ad-right {
       position: fixed;
       top: 50%;
       transform: translateY(-50%);
@@ -208,79 +300,159 @@
     .ad-right {
       right: 10px;
     }
-    
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .ad-left, .ad-right {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .logo-container h1 {
+        font-size: 2rem;
+      }
+      
+      .nav-tabs {
+        flex-direction: column;
+        width: 90%;
+      }
+      
+      .screenshots img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- LOGO AREA -->
-    <img src="logo.png" alt="GameTimer Logo">
-    <h1>GameTimer</h1>
-    <p>Focus. Organize. Achieve more.</p>
+    <div class="logo-container">
+      <img src="logo.png" alt="RRStudio Logo">
+      <h1>RRStudio</h1>
+    </div>
+    <p>Creating innovative apps for productivity and geolocation</p>
   </header>
 
-  <section class="card">
-    <p><strong>GameTimer</strong> helps you manage your time and maintain focus with a minimalist design. Perfect for gaming, working, and personal productivity.</p>
-    
-    <div class="download-buttons">
-      <a href="https://github.com/RRStudio31/rrstudio31.github.io/releases/tag/GameTimer" target="_blank">💻 Download for Windows</a>
-    </div>
+  <div class="nav-tabs">
+    <div class="nav-tab active" data-tab="georank">GeoRank</div>
+    <div class="nav-tab" data-tab="gametimer">GameTimer</div>
+  </div>
 
-    <div class="donate">
-      <h3>Support the Project 💚</h3>
-      <p>If you like this app, consider making a donation to support its development.</p>
-      <button class="donate-button" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=6LUTPRH32U7YE', '_blank')">
-        Donate via PayPal
-      </button>
-    </div>
+  <!-- GeoRank Section -->
+  <section id="georank" class="section georank-section active">
+    <div class="card">
+      <h2>GeoRank</h2>
+      <p>GeoRank is our flagship application for location-based services and geospatial analysis. With advanced algorithms and an intuitive interface, it helps businesses and individuals make data-driven decisions based on geographic information.</p>
+      
+      <div class="download-buttons">
+        <a href="#" target="_blank">📱 Download for Android</a>
+        <a href="#" target="_blank">🍎 Download for iOS</a>
+        <a href="#" target="_blank">💻 Web Version</a>
+      </div>
 
-    <div class="screenshots">
-      <img src="GameTimer_em_curso.png" alt="Main screen">
-      <img src="GameTimercontrolo.png" alt="Timer running">
-      <img src="GameTimersettings.png" alt="Settings">
+      <div class="screenshots">
+        <img src="georank1.jpg" alt="GeoRank Main Screen">
+        <img src="georank2.jpg" alt="GeoRank Analysis">
+        <img src="georank3.jpg" alt="GeoRank Results">
+      </div>
+
+      <div class="donate">
+        <h3>Support Our Development 💚</h3>
+        <p>Your donations help us continue improving GeoRank and developing new features.</p>
+        <button class="donate-button" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=6LUTPRH32U7YE', '_blank')">
+          Donate via PayPal
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GameTimer Section -->
+  <section id="gametimer" class="section gametimer-section">
+    <div class="card">
+      <h2>GameTimer</h2>
+      <p><strong>GameTimer</strong> helps you manage your time and maintain focus with a minimalist design. Perfect for gaming, working, and personal productivity.</p>
+      
+      <div class="download-buttons">
+        <a href="https://github.com/RRStudio31/rrstudio31.github.io/releases/tag/GameTimer" target="_blank">💻 Download for Windows</a>
+      </div>
+
+      <div class="screenshots">
+        <img src="GameTimer_em_curso.png" alt="Main screen">
+        <img src="GameTimercontrolo.png" alt="Timer running">
+        <img src="GameTimersettings.png" alt="Settings">
+      </div>
+
+      <div class="donate">
+        <h3>Support the Project 💚</h3>
+        <p>If you like this app, consider making a donation to support its development.</p>
+        <button class="donate-button" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=6LUTPRH32U7YE', '_blank')">
+          Donate via PayPal
+        </button>
+      </div>
     </div>
   </section>
 
   <footer>
-    © 2025 GameTimer — Developed by RRStudio
+    © 2025 RRStudio — GameTimer & GeoRank
   </footer>
 
   <script>
+    // Tab navigation
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs and sections
+        document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        
+        // Add active class to clicked tab and corresponding section
+        tab.classList.add('active');
+        const tabId = tab.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // PayPal integration
     paypal.HostedButtons({
       hostedButtonId: "SEU_BUTTON_ID_PAYPAL"
     }).render("#paypal-container");
   </script>
 
-   <div class="ad-left">
+  <div class="ad-left">
     <div class="ad-label">Advertisement</div>
     <!-- Adsterra Banner Left -->
-   <script type="text/javascript">
-	atOptions = {
-		'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
-		'format' : 'iframe',
-		'height' : 600,
-		'width' : 160,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/723c8e3e8d975dbf79e54cf49663fc8a/invoke.js"></script>
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/723c8e3e8d975dbf79e54cf49663fc8a/invoke.js"></script>
   </div>
 
   <div class="ad-right">
     <div class="ad-label">Advertisement</div>
     <!-- Adsterra Banner Right -->
     <script type="text/javascript">
-	atOptions = {
-		'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
-		'format' : 'iframe',
-		'height' : 600,
-		'width' : 160,
-		'params' : {}
-	};
+      atOptions = {
+        'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/723c8e3e8d975dbf79e54cf49663fc8a/invoke.js"></script>
+  </div>
 
 </body>
 </html>
-
-
-
