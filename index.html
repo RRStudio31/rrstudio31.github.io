@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="monetag" content="899244181ef5d78848fe28cecc8bcee2">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1687016561124188"
+     crossorigin="anonymous"></script>
+  <script>(function(s){s.dataset.zone='10015633',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
   <title>RRStudio</title>
-  <link rel="icon" type="image/x-icon" href="logo1 (2).png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -16,7 +19,7 @@
       --primary-green-dark: #059669;
       --accent-purple: #8b5cf6;
       --accent-orange: #f59e0b;
-      --bg-light: #0b1a2a;
+      --bg-light: #f0f9ff;
       --bg-card: #ffffff;
       --bg-dark: #1e293b;
       --text-light: #334155;
@@ -42,7 +45,7 @@
       overflow-x: hidden;
     }
 
-    /* Header com estilo cartoonizado */
+    /* Header with cartoon style */
     header {
       background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
       color: white;
@@ -124,7 +127,7 @@
       z-index: 1;
     }
 
-    /* Navigation com estilo cartoonizado */
+    /* Navigation with cartoon style */
     .nav-container {
       display: flex;
       justify-content: center;
@@ -208,7 +211,7 @@
       color: var(--text-dark);
     }
 
-    /* Cards com estilo cartoonizado */
+    /* Cards with cartoon style */
     .card {
       background: var(--bg-card);
       border-radius: 24px;
@@ -275,7 +278,7 @@
       color: var(--muted-dark);
     }
 
-    /* Features com estilo cartoonizado */
+    /* Features with cartoon style */
     .features {
       display: flex;
       flex-wrap: wrap;
@@ -352,7 +355,7 @@
       color: var(--muted-dark);
     }
 
-    /* Botões com estilo cartoonizado */
+    /* Buttons with cartoon style */
     .download-buttons {
       margin-top: 2.5rem;
       display: flex;
@@ -409,7 +412,7 @@
       box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
     }
 
-    /* Seção de doação */
+    /* Donation section */
     .donate {
       margin-top: 3.5rem;
       text-align: center;
@@ -510,7 +513,7 @@
       box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
     }
 
-    /* Screenshots com estilo cartoonizado */
+    /* Screenshots with cartoon style */
     .screenshots {
       margin-top: 3.5rem;
       display: flex;
@@ -542,29 +545,11 @@
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     }
 
-    .screenshot-placeholder {
+    .screenshot img {
       width: 100%;
       height: 200px;
-      background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 700;
-      font-size: 1.2rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .screenshot-placeholder::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
-      animation: shimmer 3s infinite linear;
+      object-fit: cover;
+      display: block;
     }
 
     footer {
@@ -585,7 +570,30 @@
       color: var(--muted-dark);
     }
 
-    /* Animações */
+    /* Side Ads */
+    .ad-left, .ad-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 160px;
+      height: 600px;
+      border: 2px solid #111;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      background-color: #000;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .ad-left {
+      left: 10px;
+    }
+
+    .ad-right {
+      right: 10px;
+    }
+
+    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -617,6 +625,12 @@
     }
 
     /* Responsive */
+    @media (max-width: 1200px) {
+      .ad-left, .ad-right {
+        display: none;
+      }
+    }
+
     @media (max-width: 768px) {
       .logo-container {
         flex-direction: column;
@@ -660,11 +674,42 @@
 </head>
 <body>
 
+  <!-- Side Ads -->
+  <div class="ad-left">
+    <div class="ad-label">Advertisement</div>
+    <!-- Adsterra Banner Left -->
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/723c8e3e8d975dbf79e54cf49663fc8a/invoke.js"></script>
+  </div>
+
+  <div class="ad-right">
+    <div class="ad-label">Advertisement</div>
+    <!-- Adsterra Banner Right -->
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '723c8e3e8d975dbf79e54cf49663fc8a',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/723c8e3e8d975dbf79e54cf49663fc8a/invoke.js"></script>
+  </div>
+
   <header>
     <div class="logo-container">
-      <div class="logo-placeholder"><img src="logo1 (2).png" style="height: 80px; width: 80px;"></div>
+      <img src="logo1 (2).png">
     </div>
-    <p>Criando aplicações inovadoras para produtividade e geolocalização</p>
+    <p>Creating innovative apps for productivity and geolocation</p>
   </header>
 
   <div class="nav-container">
@@ -684,23 +729,23 @@
   <section id="georank" class="section georank-section active">
     <div class="card">
       <h2>GeoRank</h2>
-      <p>O GeoRank é a nossa aplicação principal para serviços baseados em localização e análise geoespacial. Com algoritmos avançados e uma interface intuitiva, ajuda empresas e indivíduos a tomar decisões baseadas em informações geográficas.</p>
+      <p>GeoRank is our flagship application for location-based services and geospatial analysis. With advanced algorithms and an intuitive interface, it helps businesses and individuals make data-driven decisions based on geographic information.</p>
       
       <div class="features">
         <div class="feature">
           <span class="feature-icon">🗺️</span>
-          <h3>Análise de Localização</h3>
-          <p>Obtenha insights valiosos baseados em dados geográficos</p>
+          <h3>Location Analysis</h3>
+          <p>Get valuable insights based on geographic data</p>
         </div>
         <div class="feature">
           <span class="feature-icon">📊</span>
-          <h3>Relatórios Detalhados</h3>
-          <p>Gere relatórios completos para análise de mercado</p>
+          <h3>Detailed Reports</h3>
+          <p>Generate comprehensive reports for market analysis</p>
         </div>
         <div class="feature">
           <span class="feature-icon">🔍</span>
-          <h3>Pesquisa Avançada</h3>
-          <p>Encontre os melhores locais com base em múltiplos critérios</p>
+          <h3>Advanced Search</h3>
+          <p>Find the best locations based on multiple criteria</p>
         </div>
       </div>
       
@@ -711,19 +756,19 @@
       </div>
 
       <div class="screenshots">
-        <img src="georank1.jpeg" alt="Tela Principal GeoRank" style="height: 400px; object-fit: cover;">
-        <img src="georank2.jpeg" alt="Análise GeoRank" style="height: 400px; object-fit: cover;">
-        <img src="georank3.jpeg" alt="Resultados GeoRank" style="height: 400px; object-fit: cover;">
-        <img src="georank4.jpeg" alt="Tela Principal GeoRank" style="height: 400px; object-fit: cover;">
-        <img src="georank5.jpeg" alt="Análise GeoRank" style="height: 400px; object-fit: cover;">
-        <img src="georank6.jpeg" alt="Resultados GeoRank" style="height: 400px; object-fit: cover;">
+        <img src="georank1.jpeg" alt="GeoRank Main Screen">
+        <img src="georank2.jpeg" alt="GeoRank Analysis">
+        <img src="georank3.jpeg" alt="GeoRank Results">
+        <img src="georank4.jpeg" alt="GeoRank Interface">
+        <img src="georank5.jpeg" alt="GeoRank Features">
+        <img src="georank6.jpeg" alt="GeoRank Dashboard">
       </div>
 
       <div class="donate">
-        <h3>Apoie o Nosso Desenvolvimento 💙</h3>
-        <p>As suas doações ajudam-nos a continuar a melhorar o GeoRank e a desenvolver novas funcionalidades.</p>
+        <h3>Support Our Development 💙</h3>
+        <p>Your donations help us continue improving GeoRank and developing new features.</p>
         <button class="donate-button">
-          💝 Doar via PayPal
+          💝 Donate via PayPal
         </button>
       </div>
     </div>
@@ -733,23 +778,23 @@
   <section id="gametimer" class="section gametimer-section">
     <div class="card">
       <h2>GameTimer</h2>
-      <p>O <strong>GameTimer</strong> ajuda-o a gerir o seu tempo e a manter o foco com um design minimalista. Perfeito para jogos, trabalho e produtividade pessoal.</p>
+      <p><strong>GameTimer</strong> helps you manage your time and maintain focus with a minimalist design. Perfect for gaming, working, and personal productivity.</p>
       
       <div class="features">
         <div class="feature">
           <span class="feature-icon">⏱️</span>
-          <h3>Temporizador</h3>
-          <p>Defina temporizadores personalizados para as suas tarefas</p>
+          <h3>Timer</h3>
+          <p>Set custom timers for your tasks</p>
         </div>
         <div class="feature">
           <span class="feature-icon">📈</span>
-          <h3>Estatísticas</h3>
-          <p>Acompanhe o seu progresso e produtividade ao longo do tempo</p>
+          <h3>Statistics</h3>
+          <p>Track your progress and productivity over time</p>
         </div>
         <div class="feature">
           <span class="feature-icon">🎮</span>
-          <h3>Modo Jogo</h3>
-          <p>Funcionalidades especiais para sessões de gaming</p>
+          <h3>Game Mode</h3>
+          <p>Special features for gaming sessions</p>
         </div>
       </div>
       
@@ -758,23 +803,23 @@
       </div>
 
       <div class="screenshots">
-      <img src="GameTimer_em_curso.png" alt="Tela Principal GameTimer" style="height: 300px; object-fit: cover;">
-<img src="GameTimercontrolo.png" alt="Timer running GameTimer" style="height: 300px; object-fit: cover;">
-<img src="GameTimersettings.png" alt="Settings GameTimer" style="height: 300px; object-fit: cover;">
-    </div>
+        <img src="GameTimer_em_curso.png" alt="GameTimer Main Screen">
+        <img src="GameTimercontrolo.png" alt="GameTimer Running">
+        <img src="GameTimersettings.png" alt="GameTimer Settings">
+      </div>
 
       <div class="donate">
-        <h3>Apoie o Projeto 💚</h3>
-        <p>Se gosta desta aplicação, considere fazer uma doação para apoiar o seu desenvolvimento.</p>
+        <h3>Support the Project 💚</h3>
+        <p>If you like this app, consider making a donation to support its development.</p>
         <button class="donate-button">
-          💝 Doar via PayPal
+          💝 Donate via PayPal
         </button>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2025 RRStudio — GameTimer & GeoRank
+    © 2025 RRStudio
   </footer>
 
   <script>
