@@ -372,35 +372,55 @@
     }
 
     /* Screenshots with cartoon style */
-    .screenshots {
-      margin-top: 3.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.8rem;
-    }
+    /* Screenshots with cartoon style - CORRIGIDO */
+.screenshots {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
 
-    .screenshot {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      overflow: hidden;
-      border: 3px solid white;
-    }
+.screenshot {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  border: 3px solid white;
+}
 
-    .screenshot:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    }
+.screenshot:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
 
-    .screenshot img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
+/* CORREÇÃO: Remover height fixo e usar object-fit: contain */
+.screenshot img {
+  width: 100%;
+  height: auto; /* Mudar de height fixo para auto */
+  object-fit: contain; /* Mudar de cover para contain */
+  display: block;
+}
+
+/* Para desktop - manter proporção mas sem cortar */
+@media (min-width: 768px) {
+  .screenshots {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .screenshot {
+    width: 300px;
+  }
+  
+  .screenshot img {
+    height: auto; /* Manter altura automática */
+    max-height: 400px; /* Limitar altura máxima */
+  }
+}
 
     footer {
       margin-top: 4rem;
